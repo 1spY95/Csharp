@@ -1,0 +1,30 @@
+[FR] Regedit démarrage windows 7,8,10
+[ENG] Regedit startup for windows 7,8,10
+[SPA] 
+[ITA] 
+[DE] 
+[RU] 
+
+
+**************************************************************
+
+using System;
+using System.Windows.Forms;
+using Microsoft.Win32;
+
+namespace WindowsFormsApp1
+{
+    public partial class Form1 : Form
+    {
+        RegistryKey reg =    Registry.CurrentUser.OpenSubKey("SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+        public Form1()
+         {
+          reg.SetValue("Yourtexthere", Application.ExecutablePath.ToString());
+          InitializeComponent();
+         }     
+    }
+}
+
+
+Output = SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
+Open as admin not required !!
