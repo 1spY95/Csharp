@@ -28,3 +28,17 @@ namespace WindowsFormsApp1
 
 Output = SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run", true);
 Open as admin not required !!
+
+==========================================
+
+ try
+            {
+
+Microsoft.Win32.Registry.LocalMachine.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run").SetValue("TUTO", Application.ExecutablePath);
+  MessageBox.Show("SubKey created for Local Machine!");
+            }
+            catch
+            {
+          Microsoft.Win32.Registry.CurrentUser.CreateSubKey(@"Software\Microsoft\Windows\CurrentVersion\Run").SetValue("TUTO", Application.ExecutablePath);
+               MessageBox.Show("SubKey created for Current User!");
+            }
