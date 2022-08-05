@@ -1,0 +1,18 @@
+
+
+
+
+***************************************************************
+
+Method #1 :
+
+- Timer * 1
+- Button * 2
+2)2 bouton (Start et Stop)
+Code dans le Button (Start):
+Timer1.Start();
+Code Dans le button(Stop):
+Timer1.Stop();
+Code Dans le timer:
+this.Location = Cursor.Position;
+
